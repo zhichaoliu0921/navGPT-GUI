@@ -466,15 +466,24 @@ border-radius:15px;}</string>
                          </item>
                          <item>
                           <widget class="QFrame" name="yoloOutput_QF2">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QHBoxLayout" name="horizontalLayout_6">
+                           <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0,0,0">
                             <property name="spacing">
                              <number>18</number>
+                            </property>
+                            <property name="sizeConstraint">
+                             <enum>QLayout::SetDefaultConstraint</enum>
                             </property>
                             <property name="leftMargin">
                              <number>9</number>
@@ -695,16 +704,25 @@ border-bottom-right-radius: {margin}px 0;
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QLabel" name="modelLoco_QL">
+                                  <widget class="QTextEdit" name="modelLoco_TE">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>188</width>
+                                     <height>95</height>
+                                    </size>
+                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">color: rgb(255, 255, 255);
-font: 17pt &quot;Microsoft YaHei UI&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
+                                    <string notr="true">background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));
+color: rgb(255, 255, 255);
+font: 17pt &quot;Microsoft YaHei UI&quot;;
+
+</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -772,16 +790,24 @@ border-bottom-right-radius: {margin}px 0;
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QLabel" name="SensorOutput_QL">
+                                  <widget class="QTextEdit" name="SensorOutput_TE">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>188</width>
+                                     <height>95</height>
+                                    </size>
+                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">color: rgb(255, 255, 255);
-font: 17pt &quot;Microsoft YaHei UI&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
+                                    <string notr="true">background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));
+color: rgb(255, 255, 255);
+font: 17pt &quot;Microsoft YaHei UI&quot;;
+</string>
                                    </property>
                                   </widget>
                                  </item>

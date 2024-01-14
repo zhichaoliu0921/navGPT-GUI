@@ -18,7 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QDoubleSpinBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLayout,
     QMainWindow, QProgressBar, QPushButton, QSizePolicy,
-    QSlider, QSpacerItem, QVBoxLayout, QWidget)
+    QSlider, QSpacerItem, QTextEdit, QVBoxLayout,
+    QWidget)
 import ui.resources
 
 class Ui_MainWindow(object):
@@ -228,11 +229,17 @@ class Ui_MainWindow(object):
 
         self.yoloOutput_QF2 = QFrame(self.yoloOutput_QF)
         self.yoloOutput_QF2.setObjectName(u"yoloOutput_QF2")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.yoloOutput_QF2.sizePolicy().hasHeightForWidth())
+        self.yoloOutput_QF2.setSizePolicy(sizePolicy)
         self.yoloOutput_QF2.setFrameShape(QFrame.StyledPanel)
         self.yoloOutput_QF2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.yoloOutput_QF2)
         self.horizontalLayout_6.setSpacing(18)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setSizeConstraint(QLayout.SetDefaultConstraint)
         self.horizontalLayout_6.setContentsMargins(9, 9, 9, 9)
         self.yoloModelOutput_QF = QFrame(self.yoloOutput_QF2)
         self.yoloModelOutput_QF.setObjectName(u"yoloModelOutput_QF")
@@ -360,13 +367,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_15.addWidget(self.label_7)
 
-        self.modelLoco_QL = QLabel(self.yoloLocoOutput_QF)
-        self.modelLoco_QL.setObjectName(u"modelLoco_QL")
-        self.modelLoco_QL.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 17pt \"Microsoft YaHei UI\";")
-        self.modelLoco_QL.setAlignment(Qt.AlignCenter)
+        self.modelLoco_TE = QTextEdit(self.yoloLocoOutput_QF)
+        self.modelLoco_TE.setObjectName(u"modelLoco_TE")
+        sizePolicy.setHeightForWidth(self.modelLoco_TE.sizePolicy().hasHeightForWidth())
+        self.modelLoco_TE.setSizePolicy(sizePolicy)
+        self.modelLoco_TE.setMaximumSize(QSize(188, 95))
+        self.modelLoco_TE.setStyleSheet(u"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));\n"
+"color: rgb(255, 255, 255);\n"
+"font: 17pt \"Microsoft YaHei UI\";\n"
+"\n"
+"")
 
-        self.verticalLayout_15.addWidget(self.modelLoco_QL)
+        self.verticalLayout_15.addWidget(self.modelLoco_TE)
 
         self.verticalLayout_15.setStretch(0, 1)
         self.verticalLayout_15.setStretch(1, 2)
@@ -408,13 +420,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.label_9)
 
-        self.SensorOutput_QL = QLabel(self.yoloSensorOutput_QF)
-        self.SensorOutput_QL.setObjectName(u"SensorOutput_QL")
-        self.SensorOutput_QL.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 17pt \"Microsoft YaHei UI\";")
-        self.SensorOutput_QL.setAlignment(Qt.AlignCenter)
+        self.SensorOutput_TE = QTextEdit(self.yoloSensorOutput_QF)
+        self.SensorOutput_TE.setObjectName(u"SensorOutput_TE")
+        sizePolicy.setHeightForWidth(self.SensorOutput_TE.sizePolicy().hasHeightForWidth())
+        self.SensorOutput_TE.setSizePolicy(sizePolicy)
+        self.SensorOutput_TE.setMaximumSize(QSize(188, 95))
+        self.SensorOutput_TE.setStyleSheet(u"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));\n"
+"color: rgb(255, 255, 255);\n"
+"font: 17pt \"Microsoft YaHei UI\";\n"
+"")
 
-        self.verticalLayout_16.addWidget(self.SensorOutput_QL)
+        self.verticalLayout_16.addWidget(self.SensorOutput_TE)
 
         self.verticalLayout_16.setStretch(0, 1)
         self.verticalLayout_16.setStretch(1, 2)
@@ -464,11 +480,11 @@ class Ui_MainWindow(object):
 
         self.progressBar = QProgressBar(self.yoloVisual_QF)
         self.progressBar.setObjectName(u"progressBar")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.progressBar.sizePolicy().hasHeightForWidth())
-        self.progressBar.setSizePolicy(sizePolicy)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.progressBar.sizePolicy().hasHeightForWidth())
+        self.progressBar.setSizePolicy(sizePolicy1)
         self.progressBar.setMinimumSize(QSize(0, 20))
         self.progressBar.setMaximumSize(QSize(16777215, 20))
         self.progressBar.setStyleSheet(u"QProgressBar{ \n"
@@ -652,11 +668,11 @@ class Ui_MainWindow(object):
 
         self.yoloIOUframe_2 = QFrame(self.yoloIOUframe)
         self.yoloIOUframe_2.setObjectName(u"yoloIOUframe_2")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.yoloIOUframe_2.sizePolicy().hasHeightForWidth())
-        self.yoloIOUframe_2.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.yoloIOUframe_2.sizePolicy().hasHeightForWidth())
+        self.yoloIOUframe_2.setSizePolicy(sizePolicy2)
         self.yoloIOUframe_2.setStyleSheet(u"QFrame{\n"
 "border:none;\n"
 "}")
@@ -669,11 +685,11 @@ class Ui_MainWindow(object):
         self.iou_slider = QSlider(self.yoloIOUframe_2)
         self.iou_slider.setObjectName(u"iou_slider")
         self.iou_slider.setEnabled(True)
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(15)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.iou_slider.sizePolicy().hasHeightForWidth())
-        self.iou_slider.setSizePolicy(sizePolicy2)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(15)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.iou_slider.sizePolicy().hasHeightForWidth())
+        self.iou_slider.setSizePolicy(sizePolicy3)
         self.iou_slider.setStyleSheet(u"QSlider::groove:horizontal {\n"
 "border: none;\n"
 "height: 10px;\n"
@@ -938,8 +954,8 @@ class Ui_MainWindow(object):
 
         self.conf_slider = QSlider(self.yoloConfframe)
         self.conf_slider.setObjectName(u"conf_slider")
-        sizePolicy2.setHeightForWidth(self.conf_slider.sizePolicy().hasHeightForWidth())
-        self.conf_slider.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.conf_slider.sizePolicy().hasHeightForWidth())
+        self.conf_slider.setSizePolicy(sizePolicy3)
         self.conf_slider.setStyleSheet(u"QSlider::groove:horizontal {\n"
 "border: none;\n"
 "height: 10px;\n"
@@ -964,11 +980,11 @@ class Ui_MainWindow(object):
 
         self.conf_spinbox = QDoubleSpinBox(self.yoloConfframe)
         self.conf_spinbox.setObjectName(u"conf_spinbox")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.conf_spinbox.sizePolicy().hasHeightForWidth())
-        self.conf_spinbox.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.conf_spinbox.sizePolicy().hasHeightForWidth())
+        self.conf_spinbox.setSizePolicy(sizePolicy4)
         self.conf_spinbox.setStyleSheet(u"QDoubleSpinBox {\n"
 "border: 0px solid lightgray;\n"
 "border-radius: 2px;\n"
@@ -1051,12 +1067,10 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Detection", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Use Model", None))
         self.modelOutput_QL.setText("")
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Robots", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Robot", None))
         self.RobotOutput_QL.setText("")
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Locomotion", None))
-        self.modelLoco_QL.setText("")
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Perception", None))
-        self.SensorOutput_QL.setText("")
         self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome!", None))
         self.label_10.setText("")
         self.yoloSave_QB.setText(QCoreApplication.translate("MainWindow", u"Save File", None))

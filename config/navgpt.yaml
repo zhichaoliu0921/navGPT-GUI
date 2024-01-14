@@ -1,0 +1,10 @@
+# Classes
+names:
+  0: 2d_lidar
+  1: 3d_lidar
+  2: legged
+  3: stereo_cam
+  4: uav
+  5: ugv
+
+
