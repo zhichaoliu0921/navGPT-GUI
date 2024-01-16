@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMenu
 from PySide6.QtGui import QImage, QPixmap, QColor
 from PySide6.QtCore import QTimer, QThread, Signal, QObject, QPoint, Qt
-from ui.home2 import Ui_MainWindow
+from ui.home import Ui_MainWindow
 import sys
 import os
 import json
