@@ -1843,7 +1843,7 @@ border: 1px outset rgb(98, 91, 213);}</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QCheckBox" name="llm1_chechbox">
+                           <widget class="QCheckBox" name="llm1_checkbox">
                             <property name="styleSheet">
                              <string notr="true">QCheckBox{
 color: rgba(255, 255, 255,210);
@@ -2008,7 +2008,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgba(255,255,255,90);
-font: 600 15pt &quot;Segoe UI&quot;;
+font: 600 12pt &quot;Segoe UI&quot;;
 border-radius: 0px;</string>
                                     </property>
                                     <property name="echoMode">
@@ -2072,7 +2072,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
                                 <string notr="true">QComboBox {
             background-color: rgba(255,255,255,90);
 			color: rgba(0, 0, 0, 200);
-			font: 600 15pt &quot;Segoe UI&quot;;
+			font: 600 12pt &quot;Segoe UI&quot;;
             border: 1px solid lightgray;
             border-radius: 0px;
             padding-left: 20px;
@@ -2194,7 +2194,7 @@ border: 1px outset rgb(98, 91, 213);}</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QCheckBox" name="llm2_chechbox">
+                           <widget class="QCheckBox" name="llm2_checkbox">
                             <property name="styleSheet">
                              <string notr="true">QCheckBox{
 color: rgba(255, 255, 255,210);
@@ -2383,7 +2383,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
                                        </property>
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgba(255,255,255,90);
-font: 600 15pt &quot;Segoe UI&quot;;
+font: 600 12pt &quot;Segoe UI&quot;;
 border-radius: 0px;</string>
                                        </property>
                                        <property name="echoMode">
@@ -2447,7 +2447,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
                                    <string notr="true">QComboBox {
             background-color: rgba(255,255,255,90);
 			color: rgba(0, 0, 0, 200);
-			font: 600 15pt &quot;Segoe UI&quot;;
+			font: 600 12pt &quot;Segoe UI&quot;;
             border: 1px solid lightgray;
             border-radius: 0px;
             padding-left: 20px;

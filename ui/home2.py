@@ -1080,9 +1080,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_21.setSpacing(0)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
         self.verticalLayout_21.setContentsMargins(0, 8, 0, 0)
-        self.llm1_chechbox = QCheckBox(self.llm1_QF)
-        self.llm1_chechbox.setObjectName(u"llm1_chechbox")
-        self.llm1_chechbox.setStyleSheet(u"QCheckBox{\n"
+        self.llm1_checkbox = QCheckBox(self.llm1_QF)
+        self.llm1_checkbox.setObjectName(u"llm1_checkbox")
+        self.llm1_checkbox.setStyleSheet(u"QCheckBox{\n"
 "color: rgba(255, 255, 255,210);\n"
 "font: 700 italic 16pt \"Segoe UI\";\n"
 "border: 1px solid white;\n"
@@ -1130,7 +1130,7 @@ class Ui_MainWindow(object):
 "{   image: url(:/all/img/checked-checkbox.png);\n"
 "}")
 
-        self.verticalLayout_21.addWidget(self.llm1_chechbox)
+        self.verticalLayout_21.addWidget(self.llm1_checkbox)
 
         self.llm1_down_QF = QFrame(self.llm1_QF)
         self.llm1_down_QF.setObjectName(u"llm1_down_QF")
@@ -1178,7 +1178,7 @@ class Ui_MainWindow(object):
         self.llm1_api.setMinimumSize(QSize(300, 0))
         self.llm1_api.setMaximumSize(QSize(800, 30))
         self.llm1_api.setStyleSheet(u"background-color: rgba(255,255,255,90);\n"
-"font: 600 15pt \"Segoe UI\";\n"
+"font: 600 12pt \"Segoe UI\";\n"
 "border-radius: 0px;")
         self.llm1_api.setEchoMode(QLineEdit.Password)
 
@@ -1216,7 +1216,7 @@ class Ui_MainWindow(object):
         self.llm1_model_CB.setStyleSheet(u"QComboBox {\n"
 "            background-color: rgba(255,255,255,90);\n"
 "			color: rgba(0, 0, 0, 200);\n"
-"			font: 600 15pt \"Segoe UI\";\n"
+"			font: 600 12pt \"Segoe UI\";\n"
 "            border: 1px solid lightgray;\n"
 "            border-radius: 0px;\n"
 "            padding-left: 20px;\n"
@@ -1307,9 +1307,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_22.setSpacing(0)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.verticalLayout_22.setContentsMargins(0, -1, 0, 0)
-        self.llm2_chechbox = QCheckBox(self.llm2_QF)
-        self.llm2_chechbox.setObjectName(u"llm2_chechbox")
-        self.llm2_chechbox.setStyleSheet(u"QCheckBox{\n"
+        self.llm2_checkbox = QCheckBox(self.llm2_QF)
+        self.llm2_checkbox.setObjectName(u"llm2_checkbox")
+        self.llm2_checkbox.setStyleSheet(u"QCheckBox{\n"
 "color: rgba(255, 255, 255,210);\n"
 "font: 700 italic 16pt \"Segoe UI\";\n"
 "border: 1px solid white;\n"
@@ -1357,7 +1357,7 @@ class Ui_MainWindow(object):
 "{   image: url(:/all/img/checked-checkbox.png);\n"
 "}")
 
-        self.verticalLayout_22.addWidget(self.llm2_chechbox)
+        self.verticalLayout_22.addWidget(self.llm2_checkbox)
 
         self.frame_2 = QFrame(self.llm2_QF)
         self.frame_2.setObjectName(u"frame_2")
@@ -1407,7 +1407,7 @@ class Ui_MainWindow(object):
         self.llm2_api.setMinimumSize(QSize(300, 0))
         self.llm2_api.setMaximumSize(QSize(800, 30))
         self.llm2_api.setStyleSheet(u"background-color: rgba(255,255,255,90);\n"
-"font: 600 15pt \"Segoe UI\";\n"
+"font: 600 12pt \"Segoe UI\";\n"
 "border-radius: 0px;")
         self.llm2_api.setEchoMode(QLineEdit.Password)
 
@@ -1445,7 +1445,7 @@ class Ui_MainWindow(object):
         self.llm2_model_CB.setStyleSheet(u"QComboBox {\n"
 "            background-color: rgba(255,255,255,90);\n"
 "			color: rgba(0, 0, 0, 200);\n"
-"			font: 600 15pt \"Segoe UI\";\n"
+"			font: 600 12pt \"Segoe UI\";\n"
 "            border: 1px solid lightgray;\n"
 "            border-radius: 0px;\n"
 "            padding-left: 20px;\n"
@@ -1769,11 +1769,11 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"By Zhichao", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Confidence", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Large Language Models (LLM)", None))
-        self.llm1_chechbox.setText(QCoreApplication.translate("MainWindow", u"GPT", None))
+        self.llm1_checkbox.setText(QCoreApplication.translate("MainWindow", u"GPT", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"API Key", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Models", None))
         self.llm1_QB.setText(QCoreApplication.translate("MainWindow", u"Enter", None))
-        self.llm2_chechbox.setText(QCoreApplication.translate("MainWindow", u"Bard", None))
+        self.llm2_checkbox.setText(QCoreApplication.translate("MainWindow", u"Bard", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"API Key", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Models", None))
         self.llm2_QB.setText(QCoreApplication.translate("MainWindow", u"Enter", None))

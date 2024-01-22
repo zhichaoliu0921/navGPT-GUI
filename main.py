@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMenu
+from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMenu, QCheckBox
 from PySide6.QtGui import QImage, QPixmap, QColor
 from PySide6.QtCore import QTimer, QThread, Signal, QObject, QPoint, Qt
 from ui.home2 import Ui_MainWindow
@@ -7,6 +7,9 @@ import os
 import json
 import cv2
 from detect.yolo import YOLO
+
+LLM = ['GPT', 'Bard']
+gpt_models = ['gpt-4-vision-preview', 'gpt-3.5-turbo']
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     main2yolo_begin_sgl = Signal()  # The main window sends an execution signal to the yolo instance
@@ -78,6 +81,51 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.main2yolo_begin_sgl.connect(self.yolo_predict.run)
         # select local file
 
+        # LLM
+        self.llm = LLM[0]
+        self.llm1_checkbox.setChecked(True)
+        self.llm1_QB.setDisabled(False)
+        self.llm2_QB.setDisabled(True)
+        self.llm1_checkbox.stateChanged.connect(lambda: self.checkboxState(self.llm1_checkbox))
+        self.llm2_checkbox.stateChanged.connect(lambda: self.checkboxState(self.llm2_checkbox))
+
+        self.llm1_QB.clicked.connect(lambda: self.btnStateLLM(self.llm1_QB))
+        self.llm2_QB.clicked.connect(lambda: self.btnStateLLM(self.llm2_QB))
+
+        # Models
+        self.llm1_model_CB.addItems(gpt_models)
+    def checkboxState(self, b):
+        if b.text() == "GPT":
+            if b.isChecked() == True:
+                self.llm2_checkbox.setChecked(False)
+                self.llm1_QB.setDisabled(False)
+                self.llm2_QB.setDisabled(True)
+                self.show_status2('GPT Selected.')
+            else:
+                self.llm2_checkbox.setChecked(True)
+                self.llm1_QB.setDisabled(True)
+                self.llm2_QB.setDisabled(False)
+                self.show_status2('Bard Selected.')
+
+        if b.text() == "Bard":
+            if b.isChecked() == True:
+                self.llm1_checkbox.setChecked(False)
+                self.llm1_QB.setDisabled(True)
+                self.llm2_QB.setDisabled(False)
+                self.show_status2('Bard Selected.')
+            else:
+                self.llm1_checkbox.setChecked(True)
+                self.llm1_QB.setDisabled(False)
+                self.llm2_QB.setDisabled(True)
+                self.show_status2('GPT Selected.')
+
+    def btnStateLLM(self, b):
+        if b.objectName() == "llm1_QB":
+            self.show_status2('GPT Validating...')
+        else:
+            self.show_status2('Bard Validating...')
+
+
     def open_src_file(self):
         config_file = 'config/fold.json'
         config = json.load(open(config_file, 'r', encoding='utf-8'))
@@ -142,6 +190,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #     self.res_video.clear()
         #     self.Class_num.setText('--')
         #     self.Target_num.setText('--')
+    def show_status2(self, msg):
+        self.status_bar_gpt.setText(msg)
+        # if msg == 'Detection completed':
+        #     if self.yolo_thread.isRunning():
+        #         self.yolo_thread.quit()  # end process
+
 
         # Change detection parameters
     def change_val(self, x, flag):
