@@ -8,7 +8,7 @@ if env_file == '':
     env_file = '.env'
 
 # Your OpenAI API key
-openai_api_key = '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'
+openai_api_key = ''
 
 # Load existing .env file or create it if it doesn't exist
 load_dotenv(env_file)
