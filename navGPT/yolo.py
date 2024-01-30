@@ -6,7 +6,6 @@ import onnxruntime as ort
 import torch
 import os
 from PySide6.QtCore import QObject, Signal
-
 from utils.helper import yaml_load
 
 class YOLO(QObject):

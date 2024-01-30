@@ -6,7 +6,7 @@ import sys
 import os
 import json
 import cv2
-from detect.yolo import YOLO
+from navGPT.yolo import YOLO
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     main2yolo_begin_sgl = Signal()  # The main window sends an execution signal to the yolo instance
@@ -131,6 +131,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if msg == 'Detection completed':
             if self.yolo_thread.isRunning():
                 self.yolo_thread.quit()  # end process
+
         # elif msg == 'Detection terminated!':
         #     self.save_res_button.setEnabled(True)
         #     self.save_txt_button.setEnabled(True)

@@ -1579,14 +1579,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
         self.gpt_image = QLabel(self.GPT_bottom_QF)
         self.gpt_image.setObjectName(u"gpt_image")
-        sizePolicy5.setHeightForWidth(self.gpt_image.sizePolicy().hasHeightForWidth())
-        self.gpt_image.setSizePolicy(sizePolicy5)
+        sizePolicy.setHeightForWidth(self.gpt_image.sizePolicy().hasHeightForWidth())
+        self.gpt_image.setSizePolicy(sizePolicy)
         self.gpt_image.setStyleSheet(u"background-color: rgb(238, 242, 255);\n"
 "border:0px solid rgb(255, 255, 255);\n"
-"border-radius:15px;\n"
-"font: 700 11pt \"Segoe UI\";\n"
-"color: rgba(0, 0, 0, 140);\n"
-"padding-left:180px;")
+"border-radius:15px")
 
         self.horizontalLayout_15.addWidget(self.gpt_image)
 
@@ -1601,14 +1598,39 @@ class Ui_MainWindow(object):
         self.verticalLayout_19.setSpacing(0)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
-        self.GPT_text = QTextEdit(self.GPT_Control_QF)
-        self.GPT_text.setObjectName(u"GPT_text")
-        sizePolicy.setHeightForWidth(self.GPT_text.sizePolicy().hasHeightForWidth())
-        self.GPT_text.setSizePolicy(sizePolicy)
-        self.GPT_text.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+        self.label_16 = QLabel(self.GPT_Control_QF)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setStyleSheet(u"font: 700 10pt \"Segoe UI\";\n"
+"color: rgba(0, 0, 0, 140);\n"
+"")
+
+        self.verticalLayout_19.addWidget(self.label_16)
+
+        self.GPT_text_sys = QTextEdit(self.GPT_Control_QF)
+        self.GPT_text_sys.setObjectName(u"GPT_text_sys")
+        sizePolicy.setHeightForWidth(self.GPT_text_sys.sizePolicy().hasHeightForWidth())
+        self.GPT_text_sys.setSizePolicy(sizePolicy)
+        self.GPT_text_sys.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "font: 12pt \"Microsoft YaHei UI\";")
 
-        self.verticalLayout_19.addWidget(self.GPT_text)
+        self.verticalLayout_19.addWidget(self.GPT_text_sys)
+
+        self.label_17 = QLabel(self.GPT_Control_QF)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setStyleSheet(u"font: 700 10pt \"Segoe UI\";\n"
+"color: rgba(0, 0, 0, 140);\n"
+"")
+
+        self.verticalLayout_19.addWidget(self.label_17)
+
+        self.GPT_text_user = QTextEdit(self.GPT_Control_QF)
+        self.GPT_text_user.setObjectName(u"GPT_text_user")
+        sizePolicy.setHeightForWidth(self.GPT_text_user.sizePolicy().hasHeightForWidth())
+        self.GPT_text_user.setSizePolicy(sizePolicy)
+        self.GPT_text_user.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"font: 12pt \"Microsoft YaHei UI\";")
+
+        self.verticalLayout_19.addWidget(self.GPT_text_user)
 
         self.GPT_button_QF = QFrame(self.GPT_Control_QF)
         self.GPT_button_QF.setObjectName(u"GPT_button_QF")
@@ -1642,28 +1664,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(114, 129, 214, 59);\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.gpt_openfile, 0, 0, 1, 1)
-
-        self.gpt_run = QPushButton(self.GPT_button_QF)
-        self.gpt_run.setObjectName(u"gpt_run")
-        self.gpt_run.setStyleSheet(u"QPushButton{\n"
-"background-image: url(:/all/img/start.png);\n"
-"background-repeat: no-repeat;\n"
-"background-position: left center;\n"
-"border: none;\n"
-"border-left: 23px solid transparent;\n"
-"\n"
-"text-align: center;\n"
-"padding-left: 0px;\n"
-"color: rgba(0, 0, 0, 199);\n"
-"font: 700 14pt \"Nirmala UI\";\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"background-color: rgba(114, 129, 214, 59);\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.gpt_run, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.gpt_openfile, 1, 0, 1, 1)
 
         self.gpt_send = QPushButton(self.GPT_button_QF)
         self.gpt_send.setObjectName(u"gpt_send")
@@ -1684,7 +1685,28 @@ class Ui_MainWindow(object):
 "background-color: rgba(114, 129, 214, 59);\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.gpt_send, 1, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.gpt_send, 2, 0, 1, 1)
+
+        self.gpt_run = QPushButton(self.GPT_button_QF)
+        self.gpt_run.setObjectName(u"gpt_run")
+        self.gpt_run.setStyleSheet(u"QPushButton{\n"
+"background-image: url(:/all/img/start.png);\n"
+"background-repeat: no-repeat;\n"
+"background-position: left center;\n"
+"border: none;\n"
+"border-left: 23px solid transparent;\n"
+"\n"
+"text-align: center;\n"
+"padding-left: 0px;\n"
+"color: rgba(0, 0, 0, 199);\n"
+"font: 700 14pt \"Nirmala UI\";\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgba(114, 129, 214, 59);\n"
+"}")
+
+        self.gridLayout_2.addWidget(self.gpt_run, 1, 1, 1, 1)
 
         self.gpt_send_image = QPushButton(self.GPT_button_QF)
         self.gpt_send_image.setObjectName(u"gpt_send_image")
@@ -1703,22 +1725,23 @@ class Ui_MainWindow(object):
 "background-color: rgba(114, 129, 214, 59);\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.gpt_send_image, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.gpt_send_image, 2, 1, 1, 1)
 
 
         self.verticalLayout_19.addWidget(self.GPT_button_QF)
 
         self.verticalLayout_19.setStretch(0, 1)
-        self.verticalLayout_19.setStretch(1, 2)
+        self.verticalLayout_19.setStretch(1, 8)
+        self.verticalLayout_19.setStretch(4, 8)
 
         self.horizontalLayout_15.addWidget(self.GPT_Control_QF)
 
 
         self.verticalLayout_18.addWidget(self.GPT_bottom_QF)
 
-        self.verticalLayout_18.setStretch(0, 2)
+        self.verticalLayout_18.setStretch(0, 1)
         self.verticalLayout_18.setStretch(1, 6)
-        self.verticalLayout_18.setStretch(2, 2)
+        self.verticalLayout_18.setStretch(2, 3)
 
         self.horizontalLayout_14.addLayout(self.verticalLayout_18)
 
@@ -1778,15 +1801,17 @@ class Ui_MainWindow(object):
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Models", None))
         self.llm2_QB.setText(QCoreApplication.translate("MainWindow", u"Enter", None))
         self.status_bar_gpt.setText(QCoreApplication.translate("MainWindow", u"Welcome!", None))
-        self.gpt_image.setText(QCoreApplication.translate("MainWindow", u"No Image", None))
-        self.GPT_text.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.gpt_image.setText("")
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"Prompt for System", None))
+        self.GPT_text_sys.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"Prompt for User", None))
         self.gpt_openfile.setText(QCoreApplication.translate("MainWindow", u"Open File", None))
-        self.gpt_run.setText(QCoreApplication.translate("MainWindow", u"Run", None))
         self.gpt_send.setText(QCoreApplication.translate("MainWindow", u"Send Text", None))
+        self.gpt_run.setText(QCoreApplication.translate("MainWindow", u"Run", None))
         self.gpt_send_image.setText(QCoreApplication.translate("MainWindow", u"Send w/ Image", None))
     # retranslateUi
 
