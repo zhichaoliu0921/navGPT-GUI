@@ -3,8 +3,6 @@ import argparse
 import cv2
 import numpy as np
 import onnxruntime as ort
-import torch
-import os
 from PySide6.QtCore import QObject, Signal
 from utils.helper import yaml_load
 
