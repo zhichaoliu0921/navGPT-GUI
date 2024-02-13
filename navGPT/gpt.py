@@ -121,7 +121,7 @@ class GPT(QObject):
                         ]
                     }
                 ],
-                "max_tokens": 300
+                "max_tokens": 600
             }
 
             response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)

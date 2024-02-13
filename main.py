@@ -104,6 +104,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.gpt_openfile.clicked.connect(self.gpt_openfile_func)
         self.gpt_send.clicked.connect(self.gpt_send_func)
         self.gpt_send_image.clicked.connect(self.gpt_send_image_func)
+        self.gpt_run.clicked.connect(self.gpt_run_func)
+
         self.load_gpt()
         # self.openai = None
         # Models
@@ -192,6 +194,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             self.show_status2('Query sent. Waiting for response...')
 
+    def gpt_run_func(self):
+        if self.llm1_checkbox.isChecked():
+            if self.gpt_query.openai is None:
+                self.show_status2('Please enter API key ...')
+            else:
+                self.gpt_query.system_prompt = "I am implementing a robot navigation system in the environment shown in the image. \n There are " + self.RobotOutput_QL.text() + " robot, including " + self.modelLoco_TE.toPlainText() + "The robots have perception sensors such as" + self.SensorOutput_TE.toPlainText()
+                # print(self.gpt_query.system_prompt)
+                self.gpt_query.user_prompt = "What mapping and navigation algorithms would be best suited for this environment and robot setting?"
+
+                if not self.gpt_thread.isRunning():
+                    self.gpt_thread.start()
+
+                self.main2gpt_begin_sql_image.emit()
+
+        else:
+            self.show_status2('Query sent. Waiting for response...')
     def btnStateLLM(self, b):
         if b.objectName() == "llm1_QB":
 
